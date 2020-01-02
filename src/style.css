@@ -1,0 +1,13 @@
+.kpi-wrapper {
+    background-color: #fff;
+    align-content: center;
+    border: 1px solid rgba(86, 167, 216, 0.3);
+    display: grid;
+    align-content: end;
+}
+.kpi-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: end;
+    grid-gap: 1%;
+}
