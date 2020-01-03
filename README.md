@@ -9,7 +9,7 @@ This is a lightweight, simple chart for tracking KPIs
     title:string
     style:{}
 >
-    KPie
+    <KPie
         value:number
         target:number
         threshold:number
