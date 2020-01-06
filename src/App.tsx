@@ -8,8 +8,8 @@ var mountNode = document.getElementById("app");
 ReactDOM.render(
     <div>
         <KPieLayout columns={2}>
-            <KPie 
-                value={20}
+            <KPie
+                value={100}
                 threshold={40}
                 target={80}
                 options={{
@@ -18,42 +18,39 @@ ReactDOM.render(
                     lineWidth: 15
                 }}
             />
-            <KPie 
+            <KPie
                 value={80}
                 threshold={40}
                 target={80}
                 options={{
-                    barColor:'#9bbfd4',
-                    scaleColor:false,
-                    lineWidth:20,
-                    lineCap:'circle'
+                    barColor: '#9bbfd4',
+                    scaleColor: false,
+                    lineWidth: 20,
+                    lineCap: 'circle'
                 }}
             />
-            <KPie 
+            <KPie
                 value={75}
                 threshold={40}
                 target={80}
                 options={{
-                    barColor:'#fdf65a',
-                    lineWidth:15,
-                    lineCap:'circle'
+                    barColor: '#fdf65a',
+                    lineWidth: 15,
+                    lineCap: 'circle'
                 }}
             />
-            <KPie 
-                value={100}
+            <KPie
+                value={60}
                 threshold={40}
                 target={80}
                 options={{
                     renderer: "SVG",
-                    barColor:'#2C3E50',
-                    scaleColor:false,
-                    lineWidth:20,
-                    lineCap:'circle'
+                    lineWidth: 20,
                 }}
             />
         </KPieLayout>
-        <KPieLayout columns={1}>
-            <KPie 
+        <KPieLayout columns={3}>
+            <KPie
                 value={20}
                 threshold={40}
                 target={80}
@@ -63,37 +60,37 @@ ReactDOM.render(
                     lineWidth: 15
                 }}
             />
-            <KPie 
+            <KPie
                 value={80}
                 threshold={40}
                 target={80}
                 options={{
-                    barColor:'#9bbfd4',
-                    scaleColor:false,
-                    lineWidth:20,
-                    lineCap:'circle'
+                    barColor: '#9bbfd4',
+                    scaleColor: false,
+                    lineWidth: 20,
+                    lineCap: 'circle'
                 }}
             />
-            <KPie 
+            <KPie
                 value={75}
                 threshold={40}
                 target={80}
                 options={{
-                    barColor:'#fdf65a',
-                    lineWidth:15,
-                    lineCap:'circle'
+                    barColor: '#fdf65a',
+                    lineWidth: 15,
+                    lineCap: 'circle'
                 }}
             />
-            <KPie 
+            <KPie
                 value={100}
                 threshold={40}
                 target={80}
                 options={{
                     renderer: "SVG",
-                    barColor:'#2C3E50',
-                    scaleColor:false,
-                    lineWidth:20,
-                    lineCap:'circle'
+                    barColor: '#2C3E50',
+                    // scaleColor: false,
+                    lineWidth: 20,
+                    lineCap: 'circle'
                 }}
             />
         </KPieLayout>
