@@ -1,9 +1,15 @@
 {
-    "compilerOptions": {
-      "jsx": "react",
-      "target": "es5",
-      "moduleResolution": "node",
-      "traceResolution": true,
-      "declaration": true
-    }
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "moduleResolution": "node",
+    "traceResolution": true,
+    "declaration": true,
+    "strict": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
   }
+}
