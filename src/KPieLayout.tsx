@@ -12,7 +12,7 @@ export const KPieLayout = styled.div<DefaultLayout>`
   grid-template-columns: repeat(${props => props.columns || defaultLayout.columns}, minmax(100px, 1fr));
   align-items: ${props => props.alignment || defaultLayout.alignment};
   justify-items: ${props => props.alignment || defaultLayout.alignment};
-  grid-gap: 1%;
+  grid-gap: 5%;
   grid-auto-rows: ${props => props.autoRows || defaultLayout.autoRows};
   grid-template-rows: ${props => props.templateRows || defaultLayout.templateRows};
 `
