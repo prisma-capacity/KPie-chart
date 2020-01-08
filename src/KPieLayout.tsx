@@ -9,6 +9,7 @@ const defaultLayout: DefaultLayout = {
 
 export const KPieLayout = styled.div<DefaultLayout>`
   display: grid;
+  margin-top: 5%;
   grid-template-columns: repeat(${props => props.columns || defaultLayout.columns}, minmax(100px, 1fr));
   align-items: ${props => props.alignment || defaultLayout.alignment};
   justify-items: ${props => props.alignment || defaultLayout.alignment};
