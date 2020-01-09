@@ -1,19 +1,29 @@
-import styled, { DefaultLayout } from "styled-components";
+import styled from "styled-components";
 
-const defaultLayout: DefaultLayout = {
-  columns: 'auto-fit',
-  alignment: 'center',
-  autoRows: 'auto',
-  templateRows: 'auto'
+interface DefaultLayout {
+  columns?: number | "auto-fit";
+  alignment?: string;
+  autoRows?: number | string;
+  templateRows?: string;
 }
+
+const defaultLayout: Required<DefaultLayout> = {
+  columns: "auto-fit",
+  alignment: "center",
+  autoRows: "auto",
+  templateRows: "auto"
+};
 
 export const KPieLayout = styled.div<DefaultLayout>`
   display: grid;
-  margin-top: 5%;
-  grid-template-columns: repeat(${props => props.columns || defaultLayout.columns}, minmax(100px, 1fr));
-  align-items: ${props => props.alignment || defaultLayout.alignment};
-  justify-items: ${props => props.alignment || defaultLayout.alignment};
+  grid-template-columns: repeat(
+    ${({ columns = defaultLayout.columns }) => columns},
+    minmax(100px, 1fr)
+  );
+  align-items: ${({ alignment = defaultLayout.alignment }) => alignment};
+  justify-items: ${({ alignment = defaultLayout.alignment }) => alignment};
   grid-gap: 5%;
-  grid-auto-rows: ${props => props.autoRows || defaultLayout.autoRows};
-  grid-template-rows: ${props => props.templateRows || defaultLayout.templateRows};
-`
+  grid-auto-rows: ${({ autoRows = defaultLayout.autoRows }) => autoRows};
+  grid-template-rows: ${({ templateRows = defaultLayout.templateRows }) =>
+    templateRows};
+`;
