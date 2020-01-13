@@ -1,29 +1,23 @@
-import * as React from 'react';
-import { EasyPieChart } from 'easy-pie-chart-typescript/';
-// import { EasyPieChart } from './easypie/easyPieChart';
+import * as React from "react";
+import { EasyPieChart } from "easy-pie-chart-typescript";
 
 interface KPieProps {
-    value: number | string;
-    target: number;
-    threshold: number;
-    options?: any;
+  value: number | string;
+  target: number;
+  threshold: number;
+  options?: any;
 }
 
-export class KPie extends React.Component<KPieProps> {
-
-    private _id: string;
-    constructor(props) {
-        super(props);
-        this._id = Math.random().toString(36).substring(7);
-    }
-
-    componentDidMount() {
-        new EasyPieChart(document.getElementById(this._id), this.props.options)
-    }
-    render() {
-        return (<div id={this._id} className='kpie' data-percent={this.props.value}></div>
-        );
-    }
-
-
+function useOnMount(callback: React.EffectCallback) {
+  React.useEffect(callback, []);
 }
+
+export const KPie: React.FC<KPieProps> = props => {
+  const divEl = React.useRef<HTMLDivElement>(null);
+
+  useOnMount(() => {
+    new EasyPieChart(divEl.current, props.options);
+  });
+
+  return <div ref={divEl} className="kpie" data-percent={props.value}></div>;
+};
