@@ -30,17 +30,20 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
+    "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.8.3",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "easy-pie-chart-typescript": "0.0.2",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "jest": "^24.9.0",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.7.4"
   }
