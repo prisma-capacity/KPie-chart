@@ -89,7 +89,7 @@ ReactDOM.render(
           barColor: "#2C3E50",
           // scaleColor: false,
           lineWidth: 20,
-          lineCap: "circle"
+          // lineCap: "circle"
         }}
       />
     </KPieLayout>
